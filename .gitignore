@@ -1,5 +1,0 @@
-# Ignorar la carpeta de uploads
-static/uploads/
-
-# Ignorar archivos JSON específicos
-data/*.json
