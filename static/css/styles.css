@@ -1,0 +1,491 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/img/background.jpeg');
+    /* Ruta de tu imagen */
+    background-size: cover;
+    /* La imagen cubre todo el área */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    /* Fija la imagen al fondo al hacer scroll */
+    min-height: 100vh;
+    /* Asegura que cubra toda la ventana */
+}
+
+.container {
+    width: 80%;
+    /* Ajusta el ancho del contenedor */
+    max-width: 900px;
+    /* Máximo ancho para pantallas grandes */
+    margin: 50px auto;
+    /* Centra el contenedor horizontal y verticalmente */
+    background: rgba(255, 255, 255, 0.514);
+    /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Añade un efecto sutil de sombra */
+    text-align: center;
+    /* Centra el contenido de texto dentro del contenedor */
+}
+
+h1 {
+    text-align: center;
+    color: #eb6abe;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    /* Color de fondo */
+    color: #333;
+    /* Color del texto */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+button {
+    padding: 10px 20px;
+    /* Ajusta el tamaño al contenido (la palabra) */
+    background: #eb6abe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    display: inline-block;
+    /* Evita que ocupe todo el ancho */
+    margin: 0 auto;
+    /* Centra el botón dentro de un contenedor */
+}
+
+button:hover {
+    background: #ae6aeb;
+}
+
+/* Botón Volver */
+.btn-volver {
+    text-align: center;
+    /* Centra el enlace dentro del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-volver a {
+    text-decoration: none;
+    color: #ae6aeb;
+    font-weight: bold;
+    background: none;
+    /* Sin fondo */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ae6aeb;
+    /* Borde opcional para destacar el enlace */
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-volver a:hover {
+    background: #6a79eb;
+    color: #fff;
+    text-decoration: none;
+    /* Mantiene el estilo limpio al hacer hover */
+}
+
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tabla de libros */
+.item-list table {
+    width: 100%;
+    /* La tabla ocupará todo el ancho del contenedor */
+    table-layout: fixed;
+    /* Fuerza a las columnas a mantener un ancho fijo */
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.item-list td img {
+    width: 120px;
+    /* Fija el ancho de las imágenes */
+    height: auto;
+    /* Mantiene la proporción original */
+    border-radius: 5px;
+    /* Opcional: bordes redondeados */
+    display: block;
+    /* Centra la imagen dentro de la celda */
+    margin: 0 auto;
+}
+
+
+.item-list th,
+.item-list td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    /* Permite que el texto largo se divida en varias líneas */
+}
+
+/* Establece un ancho fijo para las columnas individuales */
+.item-list th:nth-child(1),
+.item-list td:nth-child(1) {
+    width: 5%;
+    /* Número de la fila */
+}
+
+.item-list th:nth-child(2),
+.item-list td:nth-child(2) {
+    width: 20%;
+    /* Imagen */
+}
+
+.item-list th:nth-child(3),
+.item-list td:nth-child(3) {
+    width: 35%;
+    /* Nombre */
+}
+
+.item-list th:nth-child(4),
+.item-list td:nth-child(4) {
+    width: 20%;
+    /* Stock */
+}
+
+.item-list th:nth-child(5),
+.item-list td:nth-child(5) {
+    width: 20%;
+    /* Acciones */
+}
+
+
+/* Acciones */
+.stock-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.stock-quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stock-actions .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.stock-actions .btn.add {
+    background-color: #846aeb;
+}
+
+.stock-actions .btn.subtract {
+    background-color: #d96aeb;
+}
+
+.stock-actions .btn:hover {
+    transform: scale(1.1);
+}
+
+.stock-actions .btn:active {
+    transform: scale(0.95);
+}
+
+.actions .btn.edit {
+    background: #ae6aeb;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.actions .btn.delete {
+    background: #6a79eb;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #eb6abe;
+    transition: background 0.3s;
+}
+
+.pagination a.active {
+    background: #eb6abe;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background: #ae6aeb;
+    color: white;
+}
+
+/* Botón flotante */
+.floating-add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #d3b8eb;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.floating-add-button:hover {
+    background-color: #6a79eb;
+    transform: scale(1.1);
+}
+
+.floating-add-button:active {
+    background-color: #6a79eb;
+    transform: scale(0.95);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #eb6abe;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-links a:hover {
+    background-color: #3e8e41;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Landing Page */
+.landing-container {
+    text-align: center;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.landing-title {
+    font-size: 36px;
+    color: #6a79eb;
+    margin-bottom: 10px;
+}
+
+.landing-subtitle {
+    font-size: 18px;
+    color: #ae6aeb;
+    margin-bottom: 30px;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 20px;
+    color: #846aeb;
+    margin: 0;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-card:hover h3 {
+    color: #d96aeb;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        border-bottom: 1px solid #3e8e41;
+    }
+
+    .navbar-links a:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .stock-actions .btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.item-row.out-of-stock {
+    background-color: #f8d7da;
+    /* Fondo rojo claro */
+    color: #721c24;
+    /* Texto rojo oscuro */
+    font-weight: bold;
+    /* Resaltar el texto */
+}
+
+.item-row.out-of-stock a {
+    color: #721c24;
+    /* Cambia el color de los enlaces en la fila */
+}
+
+.item-row.out-of-stock img {
+    opacity: 0.6;
+    /* Reduce la opacidad de la imagen en filas sin stock */
+}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<div class="landing-container">
+    <h1 class="landing-title">Bienvenido a la Gestión de Categorías</h1>
+    <p class="landing-subtitle">Explora, gestiona y personaliza tus elementos fácilmente.</p>
+
+    <div class="categories-container">
+        <a href="/books/" class="category-card">
+            <img src="/static/img/books.webp" alt="Libros">
+            <h3>Libros</h3>
+        </a>
+        <a href="/stickers/" class="category-card">
+            <img src="/static/img/books.webp" alt="Stickers">
+            <h3>Stickers</h3>
+        </a>
+        <a href="/cojines/" class="category-card">
+            <img src="/static/img/books.webp" alt="Cojines">
+            <h3>Cojines</h3>
+        </a>
+    </div>
+</div>
+{% endblock %}

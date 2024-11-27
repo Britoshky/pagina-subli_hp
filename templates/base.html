@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>{% block title %}Mi Proyecto{% endblock %}</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-logo" href="/">Mi Proyecto</a>
+            <div class="navbar-links">
+                <a href="/">Inicio</a>
+                <a href="/books/">Libros</a>
+                <a href="/stickers/">Stickers</a>
+                <a href="/cojines/">Cojines</a>
+                {% if session.get("user") %}
+                <a href="{{ url_for('auth.logout') }}">Cerrar sesión</a>
+                {% else %}
+                <a href="{{ url_for('auth.login') }}">Iniciar sesión</a>
+                {% endif %}
+            </div>
+            <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="/static/js/navbar.js"></script>
+</body>
+
+</html>

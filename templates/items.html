@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}Lista de {{ category|capitalize }}{% endblock %}
+{% block content %}
+
+
+<h1>Lista de {{ category|capitalize }}</h1>
+<!-- Campo de búsqueda dinámico -->
+<input type="text" id="search-input" placeholder="Buscar..." oninput="filterItems('{{ category }}')">
+
+<div class="item-list">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="item-list-body">
+            {% for item in items %}
+            <tr class="item-row {% if item.quantity == 0 %}out-of-stock{% endif %}">
+                <td>{{ (page - 1) * 10 + loop.index }}</td>
+                <td>
+                    {% if item.image_filename %}
+                    <img src="/static/uploads/{{ category }}/{{ item.image_filename }}" alt="{{ item.name }}">
+                    {% endif %}
+                </td>
+                <td class="item-name">{{ item.name }}</td>
+                <td>
+                    <div class="stock-actions">
+                        <a href="{{ url_for(category + '.update_stock', item_id=item.id, action='add') }}"
+                            class="btn add">+</a>
+                        <span class="stock-quantity">{{ item.quantity }}</span>
+                        <a href="{{ url_for(category + '.update_stock', item_id=item.id, action='subtract') }}"
+                            class="btn subtract">-</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="actions">
+                        <a href="{{ url_for(category + '.edit_item', item_id=item.id) }}" class="btn edit">✎ Editar</a>
+                        <a href="{{ url_for(category + '.delete_item', item_id=item.id) }}" class="btn delete"
+                            onclick="return confirm('¿Estás seguro de que deseas eliminar este {{ category }}?')">🗑
+                            Eliminar</a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Paginación -->
+<div class="pagination">
+    {% if page > 1 %}
+    <a href="{{ url_for(category + '.list_items', page=page-1, search=search_query) }}">&laquo; Anterior</a>
+    {% endif %}
+
+    {% for p in pagination %}
+    {% if p == '...' %}
+    <span>...</span>
+    {% else %}
+    <a href="{{ url_for(category + '.list_items', page=p, search=search_query) }}"
+        class="{{ 'active' if p == page else '' }}">{{ p }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if page < total_pages %} <a href="{{ url_for(category + '.list_items', page=page+1, search=search_query) }}">
+        Siguiente &raquo;</a>
+        {% endif %}
+</div>
+
+<!-- Botón flotante para agregar elementos -->
+<a href="{{ url_for(category + '.add_item') }}" class="floating-add-button">+</a>
+
+
+<script src="/static/js/search.js"></script>
+{% endblock %}
