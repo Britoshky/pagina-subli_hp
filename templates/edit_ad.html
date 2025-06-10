@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="edit-ad-form">
+    <h2>Editar Aviso</h2>
+    <form action="{{ url_for('ads.update_ad', id=ad.id) }}" method="post">
+        <label for="company_name">Nombre de la Empresa:</label>
+        <input type="text" name="company_name" id="company_name" value="{{ ad.company_name }}" required>
+
+        <label for="schedule">Horario:</label>
+        <input type="text" name="schedule" id="schedule" value="{{ ad.schedule|join(', ') }}" required>
+
+        <label for="payment_date">Fecha de Pago:</label>
+        <input type="date" name="payment_date" id="payment_date" value="{{ ad.payment_date }}" required>
+
+        <label for="total">Total:</label>
+        <input type="number" name="total" id="total" value="{{ ad.total|int }}" required>
+
+        <button type="submit" class="btn btn-success">Actualizar</button>
+    </form>
+</div>
+{% endblock %}

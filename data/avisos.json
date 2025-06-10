@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "company_name": "Bazar Chanco",
+        "schedule": [
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"
+        ],
+        "payment_date": "2025-01-25",
+        "total": 25000.0
+    },
+    {
+        "id": 2,
+        "company_name": "Ideologa Rosario",
+        "schedule": [
+            ""
+        ],
+        "payment_date": "2025-01-12",
+        "total": 40000.0
+    },
+    {
+        "id": 3,
+        "company_name": "Jokineda Kine",
+        "schedule": [
+            "09:00",
+            "11:00",
+            "13:00",
+            "15:00",
+            "17:00"
+        ],
+        "payment_date": "2025-02-07",
+        "total": 30000.0
+    }
+]

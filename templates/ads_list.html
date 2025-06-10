@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="body-avisos">
+    <h2 class="h2-avisos">Avisos Radiales</h2>
+    <a href="{{ url_for('ads.ad_form') }}" class="a-avisos">Agregar Nuevo Aviso</a>
+
+    <!-- Cards de información -->
+    <div class="info-cards">
+        <div class="card">
+            <h3>Total de Avisos</h3>
+            <p>{{ ads | length }}</p>
+        </div>
+        <div class="card">
+            <h3>Dinero Total (CLP)</h3>
+            <p>{{ formatted_total }}</p>
+        </div>
+    </div>
+
+    <!-- Gráfico de líneas -->
+    <div class="chart-container">
+        <canvas id="growthChart" data-chart='{{ cumulative_data | tojson | safe }}'></canvas>
+    </div>
+    
+    
+
+    {% if ads %}
+    <div class="table-container">
+        <table class="avisos-table">
+            <thead>
+                <tr>
+                    <th>Nombre de la Empresa</th>
+                    <th>Horario</th>
+                    <th>Fecha de Pago</th>
+                    <th>Total (CLP)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for ad in ads %}
+                <tr>
+                    <td>{{ ad.company_name }}</td>
+                    <td>{{ ad.schedule | join(', ') }}</td>
+                    <td>{{ ad.payment_date }}</td>
+                    <td>{{ ad.total | format_currency }}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="{{ url_for('ads.edit_ad', id=ad.id) }}" class="btn edit-button">Editar</a>
+                            <button onclick="confirmDeletion('{{ ad.id }}')" class="btn delete-button">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="no-data">
+        <p>No existen avisos para mostrar.</p>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Modal para confirmar eliminación -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>¿Está seguro que desea eliminar este aviso?</p>
+        <button onclick="deleteAd()" class="btn delete-confirm">Eliminar</button>
+        <button onclick="closeModal()" class="btn cancel">Cancelar</button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/ads.js') }}"></script>
+{% endblock %}

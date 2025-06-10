@@ -1,0 +1,398 @@
+/* Variables globales para avisos */
+:root {
+    --background-primary: #f7f9fc;
+    --text-primary: #333;
+    --accent-color: #ffb703;
+    --accent-dark: #fb8500;
+    --btn-bg-color: #219ebc;
+    --btn-hover-color: #023047;
+    --table-border-color: #ddd;
+    --modal-bg-color: rgba(0, 0, 0, 0.5);
+    --modal-content-bg: white;
+    --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+.body-avisos {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.h2-avisos {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.a-avisos {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto 20px;
+    display: block;
+    width: fit-content;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.a-avisos:hover {
+    background-color: var(--accent-dark);
+    box-shadow: var(--shadow-light);
+    transform: translateY(-2px);
+}
+
+/* Tabla de avisos */
+.table-container {
+    overflow-x: auto;
+}
+
+.avisos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    background-color: white;
+}
+
+.avisos-table th,
+.avisos-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+.avisos-table th {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+}
+
+.avisos-table td {
+    text-align: center;
+}
+
+.avisos-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Botones */
+.btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-button {
+    background-color: var(--btn-bg-color);
+}
+
+.edit-button:hover {
+    background-color: var(--btn-hover-color);
+    transform: translateY(-2px);
+}
+
+.delete-button {
+    background-color: #d90429;
+}
+
+.delete-button:hover {
+    background-color: #ba0f2c;
+    transform: translateY(-2px);
+}
+
+/* Centrado de botones en acciones */
+.avisos-table td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg-color);
+}
+
+.modal-content {
+    background-color: var(--modal-content-bg);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Sin datos */
+.no-data {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* Centrado de botones en acciones */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card p {
+    margin: 10px 0 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    max-width: 600px;
+}
+
+.chart-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.chart-container h3 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+/* Nuevas variables para el formulario de avisos */
+:root {
+    --form-background: #ffffff; /* Fondo blanco para el formulario */
+    --form-text: #333333; /* Texto oscuro para buena legibilidad */
+    --form-accent: #6699cc; /* Azul claro como color de acento */
+    --form-accent-dark: #336699; /* Azul más oscuro para interacciones */
+    --input-background: #f9f9f9; /* Fondo ligeramente gris para los inputs */
+    --input-border: #cccccc; /* Borde sutil para los inputs */
+    --button-background: var(--form-accent); /* Fondo de botón del color de acento */
+    --button-hover: var(--form-accent-dark); /* Color al hacer hover sobre el botón */
+    --label-color: #666666; /* Color para las etiquetas */
+}
+
+/* Estilos específicos para el formulario */
+.form-avisos {
+    background-color: var(--form-background);
+    padding: 20px;
+    border-radius: var(--avisos-borde-radius);
+    box-shadow: 0 4px 8px var(--avisos-sombra);
+}
+
+.form-avisos label {
+    color: var(--label-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-avisos input,
+.form-avisos button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--input-border);
+}
+
+.form-avisos input {
+    background-color: var(--input-background);
+}
+
+.form-avisos button {
+    background-color: var(--button-background);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-avisos button:hover {
+    background-color: var(--button-hover);
+}
+
+.form-avisos select[multiple] {
+    width: 100%;
+    height: 150px; /* Ajusta según necesidad para mostrar más opciones */
+    background-color: var(--input-background);
+    border: 1px solid var(--input-border);
+    padding: 5px;
+    box-sizing: border-box; /* Asegura que el padding y border estén dentro del width/height especificados */
+}
+
+.form-avisos select[multiple] option {
+    padding: 5px; /* Mejora la legibilidad */
+}
+
+
+.time-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.time-slot {
+    flex: 1 1 14%; /* Ajusta este valor según el espacio disponible */
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--input-background);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.time-slot.selected {
+    background-color: var(--form-accent);
+    color: white;
+}
+
+.edit-button, .delete-button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Verde */
+}
+
+.delete-button {
+    background-color: #f44336; /* Rojo */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.delete-confirm {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: #ccc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

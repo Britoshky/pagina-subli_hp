@@ -1,0 +1,99 @@
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título */
+.container h1 {
+    font-size: 24px;
+    color: #eb6abe;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Campos de entrada */
+form input[type="text"],
+form input[type="number"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus {
+    border-color: #eb6abe;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Botón de guardar */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #eb6abe;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ae6aeb;
+}
+
+/* Vista previa de la imagen */
+#preview-container {
+    margin-bottom: 15px;
+}
+
+#image-preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Botón Volver */
+.btn-volver a {
+    display: inline-block;
+    text-decoration: none;
+    color: #eb6abe;
+    font-weight: bold;
+    background: rgba(235, 106, 190, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #eb6abe;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-volver a:hover {
+    background: #eb6abe;
+    color: white;
+}

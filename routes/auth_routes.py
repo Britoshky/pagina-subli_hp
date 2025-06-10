@@ -8,7 +8,7 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
 
-        if username == "admin" and password == "password":
+        if username == "palita" and password == "Viajes2024#":
             session["user"] = username
             return redirect(url_for("home.index"))  # Redirige al inicio
         else:

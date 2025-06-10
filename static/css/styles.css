@@ -4,151 +4,49 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('/static/img/background.jpeg');
-    /* Ruta de tu imagen */
     background-size: cover;
-    /* La imagen cubre todo el área */
     background-position: center;
-    /* Centra la imagen */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
     background-attachment: fixed;
-    /* Fija la imagen al fondo al hacer scroll */
     min-height: 100vh;
-    /* Asegura que cubra toda la ventana */
 }
 
+/* Contenedor Principal */
 .container {
-    width: 80%;
-    /* Ajusta el ancho del contenedor */
-    max-width: 900px;
-    /* Máximo ancho para pantallas grandes */
-    margin: 50px auto;
-    /* Centra el contenedor horizontal y verticalmente */
-    background: rgba(255, 255, 255, 0.514);
-    /* Fondo blanco semitransparente */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Añade un efecto sutil de sombra */
     text-align: center;
-    /* Centra el contenido de texto dentro del contenedor */
 }
 
+/* Título */
 h1 {
     text-align: center;
     color: #eb6abe;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* Formularios */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Tabla de Libros */
+.item-list {
+    overflow-x: auto;
+    /* Agrega desplazamiento horizontal */
 }
 
-label {
-    font-weight: bold;
-    color: #555;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="file"] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    /* Color de fondo */
-    color: #333;
-    /* Color del texto */
-    transition: border-color 0.3s, background-color 0.3s;
-}
-
-button {
-    padding: 10px 20px;
-    /* Ajusta el tamaño al contenido (la palabra) */
-    background: #eb6abe;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-    display: inline-block;
-    /* Evita que ocupe todo el ancho */
-    margin: 0 auto;
-    /* Centra el botón dentro de un contenedor */
-}
-
-button:hover {
-    background: #ae6aeb;
-}
-
-/* Botón Volver */
-.btn-volver {
-    text-align: center;
-    /* Centra el enlace dentro del contenedor */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-volver a {
-    text-decoration: none;
-    color: #ae6aeb;
-    font-weight: bold;
-    background: none;
-    /* Sin fondo */
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 1px solid #ae6aeb;
-    /* Borde opcional para destacar el enlace */
-    transition: background 0.3s, color 0.3s;
-}
-
-.btn-volver a:hover {
-    background: #6a79eb;
-    color: #fff;
-    text-decoration: none;
-    /* Mantiene el estilo limpio al hacer hover */
-}
-
-
-a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 14px;
-    text-align: center;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Tabla de libros */
 .item-list table {
     width: 100%;
-    /* La tabla ocupará todo el ancho del contenedor */
-    table-layout: fixed;
-    /* Fuerza a las columnas a mantener un ancho fijo */
+    table-layout: auto;
+    /* Permite ajuste dinámico */
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 16px;
+    min-width: 700px;
+    /* Ancho mínimo para evitar que se encoja */
 }
-
-.item-list td img {
-    width: 120px;
-    /* Fija el ancho de las imágenes */
-    height: auto;
-    /* Mantiene la proporción original */
-    border-radius: 5px;
-    /* Opcional: bordes redondeados */
-    display: block;
-    /* Centra la imagen dentro de la celda */
-    margin: 0 auto;
-}
-
 
 .item-list th,
 .item-list td {
@@ -156,40 +54,15 @@ a:hover {
     text-align: center;
     border: 1px solid #ddd;
     word-wrap: break-word;
-    /* Permite que el texto largo se divida en varias líneas */
 }
 
-/* Establece un ancho fijo para las columnas individuales */
-.item-list th:nth-child(1),
-.item-list td:nth-child(1) {
-    width: 5%;
-    /* Número de la fila */
+.item-list td img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
 }
-
-.item-list th:nth-child(2),
-.item-list td:nth-child(2) {
-    width: 20%;
-    /* Imagen */
-}
-
-.item-list th:nth-child(3),
-.item-list td:nth-child(3) {
-    width: 35%;
-    /* Nombre */
-}
-
-.item-list th:nth-child(4),
-.item-list td:nth-child(4) {
-    width: 20%;
-    /* Stock */
-}
-
-.item-list th:nth-child(5),
-.item-list td:nth-child(5) {
-    width: 20%;
-    /* Acciones */
-}
-
 
 /* Acciones */
 .stock-actions {
@@ -203,117 +76,67 @@ a:hover {
     font-size: 16px;
     font-weight: bold;
     color: #333;
+    padding: 10px;
 }
 
 .stock-actions .btn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 40px;
+    justify-content: center;
+    width: 20px;
     height: 40px;
     border-radius: 50%;
-    color: white;
     font-size: 18px;
     font-weight: bold;
-    border: none;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
 
 .stock-actions .btn.add {
     background-color: #846aeb;
+    color: white;
 }
 
 .stock-actions .btn.subtract {
     background-color: #d96aeb;
+    color: white;
 }
 
 .stock-actions .btn:hover {
     transform: scale(1.1);
 }
 
-.stock-actions .btn:active {
-    transform: scale(0.95);
-}
-
-.actions .btn.edit {
-    background: #ae6aeb;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 5px 10px;
-}
-
-.actions .btn.delete {
-    background: #6a79eb;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 5px 10px;
-}
-
+/* Botones de Acción */
 .actions {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
 }
 
-/* Paginación */
-.pagination {
+.actions .btn {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-}
-
-.pagination a {
-    margin: 0 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 5px 10px;
     border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
     text-decoration: none;
-    color: #eb6abe;
+    color: white;
     transition: background 0.3s;
 }
 
-.pagination a.active {
-    background: #eb6abe;
-    color: white;
-    font-weight: bold;
+.actions .btn.edit {
+    background: #846aeb;
 }
 
-.pagination a:hover {
-    background: #ae6aeb;
-    color: white;
+.actions .btn.delete {
+    background: #d96aeb;
 }
 
-/* Botón flotante */
-.floating-add-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #d3b8eb;
-    color: white;
-    font-size: 36px;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    transition: transform 0.3s, background-color 0.3s;
-    z-index: 1000;
-}
-
-.floating-add-button:hover {
-    background-color: #6a79eb;
-    transform: scale(1.1);
-}
-
-.floating-add-button:active {
-    background-color: #6a79eb;
-    transform: scale(0.95);
+.actions .btn:hover {
+    opacity: 0.8;
 }
 
 /* Navbar Styles */
@@ -358,7 +181,7 @@ a:hover {
 }
 
 .navbar-links a:hover {
-    background-color: #3e8e41;
+    background-color: #6a79eb;
 }
 
 .navbar-toggle {
@@ -433,26 +256,107 @@ a:hover {
 }
 
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+
+/* Botón Flotante */
+.floating-add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #d3b8eb;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.floating-add-button:hover {
+    background-color: #6a79eb;
+    transform: scale(1.1);
+}
+
+.floating-add-button:active {
+    background-color: #6a79eb;
+    transform: scale(0.95);
+}
+
+
+/* Fila de stock agotado */
+.item-row.out-of-stock {
+    background-color: #f8d7da;
+    /* Fondo rojo claro */
+    color: #721c24;
+    /* Texto rojo oscuro */
+    font-weight: bold;
+    /* Resalta el texto */
+}
+
+.item-row.out-of-stock a {
+    color: #721c24;
+    /* Cambia el color de los enlaces */
+}
+
+.item-row.out-of-stock img {
+    opacity: 0.6;
+    /* Reduce la opacidad de la imagen */
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #eb6abe;
+    transition: background 0.3s;
+}
+
+.pagination a.active {
+    background: #eb6abe;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background: #ae6aeb;
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
     .navbar-links {
         display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #4CAF50;
+        background-color: #6a79eb;
         position: absolute;
         top: 100%;
         left: 0;
-    }
-
-    .navbar-links a {
-        padding: 10px;
-        border-bottom: 1px solid #3e8e41;
-    }
-
-    .navbar-links a:last-child {
-        border-bottom: none;
     }
 
     .navbar-links.active {
@@ -462,30 +366,170 @@ a:hover {
     .navbar-toggle {
         display: block;
     }
-}
 
-@media (max-width: 480px) {
+    .item-list table {
+        font-size: 14px;
+    }
+
+    .item-list th:nth-child(3),
+    /* Selecciona la columna "Nombre" */
+    .item-list td:nth-child(3) {
+        width: 20%;
+        /* Reduce el ancho de la columna */
+        max-width: 150px;
+        /* Máximo ancho permitido */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* Agrega puntos suspensivos si el texto es largo */
+        white-space: nowrap;
+        /* Evita que el texto se divida en varias líneas */
+    }
+
+    .item-list th,
+    .item-list td {
+        padding: 8px;
+        /* Reduce el espacio entre las celdas */
+        font-size: 12px;
+        /* Ajusta el tamaño del texto */
+    }
+
+    .item-list td img {
+        width: 60px;
+        /* Reduce el tamaño de las imágenes */
+    }
+
+    .actions .btn {
+        font-size: 12px;
+        padding: 4px 6px;
+        /* Botones más compactos */
+    }
+
     .stock-actions .btn {
-        width: 30px;
+        width: 20px;
+        /* Botones circulares más pequeños */
         height: 30px;
+        font-size: 14px;
     }
 }
 
-.item-row.out-of-stock {
-    background-color: #f8d7da;
-    /* Fondo rojo claro */
-    color: #721c24;
-    /* Texto rojo oscuro */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .item-list th,
+    .item-list td {
+        padding: 6px;
+        /* Reduce aún más el espacio en celdas */
+        font-size: 10px;
+        /* Texto más pequeño */
+    }
+
+    .item-list td img {
+        width: 50px;
+        /* Imágenes más pequeñas en pantallas muy pequeñas */
+    }
+
+    .actions .btn {
+        font-size: 10px;
+        padding: 3px 5px;
+        /* Botones más pequeños */
+    }
+
+    .stock-actions .btn {
+        width: 20px;
+        /* Botones circulares más pequeños */
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .floating-add-button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}
+
+/* Contenedor principal de métricas */
+.stock-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta individual */
+.metric-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 200px;
     font-weight: bold;
-    /* Resaltar el texto */
 }
 
-.item-row.out-of-stock a {
-    color: #721c24;
-    /* Cambia el color de los enlaces en la fila */
+/* Animación hover */
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.item-row.out-of-stock img {
-    opacity: 0.6;
-    /* Reduce la opacidad de la imagen en filas sin stock */
+/* Estilo del título */
+.metric-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
 }
+
+/* Estilo del número */
+.metric-value {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Colores personalizados */
+.metric-card.total {
+    border-left: 6px solid #6a9ceb;
+}
+
+.metric-card.in-stock {
+    border-left: 6px solid #6aeb7f;
+}
+
+.metric-card.out-of-stock {
+    border-left: 6px solid #eb6a6a;
+}
+
+/* 📌 Responsive para celulares */
+@media (max-width: 768px) {
+    .stock-metrics {
+        flex-wrap: nowrap; /* Mantiene las tarjetas en una fila */
+        gap: 8px; /* Reduce el espacio entre tarjetas */
+        justify-content: center; /* Centra las tarjetas en la pantalla */
+        padding: 0 10px; /* Agrega un pequeño margen lateral para evitar que choquen */
+    }
+
+    .metric-card {
+        flex: 1;
+        min-width: 90px; /* Reduce el tamaño mínimo */
+        max-width: 100px; /* Ajusta el ancho máximo para que entren las 3 */
+        padding: 8px; /* Reduce el padding interno */
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .metric-title {
+        font-size: 11px; /* Texto más compacto */
+    }
+
+    .metric-value {
+        font-size: 18px; /* Tamaño más pequeño del número */
+    }
+}
+

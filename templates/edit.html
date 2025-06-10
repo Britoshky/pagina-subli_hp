@@ -4,15 +4,19 @@
 <div class="container">
     <h1>Editar {{ category | capitalize }}</h1>
     <form method="POST" action="{{ url_for(category + '.edit_item', item_id=item.id) }}" enctype="multipart/form-data">
+        <!-- Campo para editar el nombre -->
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" value="{{ item.name }}" required>
 
+        <!-- Campo para editar la cantidad -->
         <label for="quantity">Cantidad:</label>
         <input type="number" id="quantity" name="quantity" value="{{ item.quantity }}" min="0" required>
 
+        <!-- Campo para cargar una nueva imagen -->
         <label for="image">Cambiar Imagen:</label>
         <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
 
+        <!-- Vista previa de la imagen -->
         <div id="preview-container">
             {% if item.image_filename %}
             <img id="image-preview" src="/static/uploads/{{ category }}/{{ item.image_filename }}" alt="Vista previa de la imagen" style="max-width: 100%; height: auto;">
@@ -21,12 +25,100 @@
             {% endif %}
         </div>
 
-        <button type="submit">Guardar Cambios</button>
+        <!-- Botón para guardar cambios -->
+        <button type="submit" class="btn-save">Guardar Cambios</button>
     </form>
+
+    <!-- Botón para volver -->
     <br>
     <div class="btn-volver">
         <a href="{{ url_for(category + '.list_items') }}">Volver</a>
     </div>
 </div>
-<script src="/static/js/image-preview.js"></script>
+
+<script>
+    function previewImage(event) {
+        const preview = document.getElementById('image-preview');
+        preview.src = URL.createObjectURL(event.target.files[0]);
+        preview.style.display = 'block';
+    }
+</script>
+
+<!-- CSS Inline -->
+<style>
+    .container {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #eb6abe;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    #preview-container {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    #image-preview {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .btn-save {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background: #eb6abe;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-save:hover {
+        background: #d36ad6;
+    }
+
+    .btn-volver {
+        text-align: center;
+    }
+
+    .btn-volver a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #6a79eb;
+    }
+
+    .btn-volver a:hover {
+        text-decoration: underline;
+    }
+</style>
 {% endblock %}

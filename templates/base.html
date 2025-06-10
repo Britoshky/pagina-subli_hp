@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/avisos.css">
     <title>{% block title %}Mi Proyecto{% endblock %}</title>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a class="navbar-logo" href="/">Mi Proyecto</a>
-            <div class="navbar-links">
+            <a class="navbar-logo" href="/">Palita-shan</a>
+            <div id="navbar-links" class="navbar-links">
                 <a href="/">Inicio</a>
                 <a href="/books/">Libros</a>
                 <a href="/stickers/">Stickers</a>
@@ -23,15 +24,19 @@
                 <a href="{{ url_for('auth.login') }}">Iniciar sesión</a>
                 {% endif %}
             </div>
-            <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+            <button id="navbar-toggle" class="navbar-toggle">☰</button>
         </div>
     </nav>
+    
 
 
     <div class="container">
         {% block content %}{% endblock %}
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/static/js/navbar.js"></script>
+    <script src="/static/js/ads.js"></script>
+
 </body>
 
 </html>

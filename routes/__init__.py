@@ -2,6 +2,7 @@ from routes.category_routes import create_category_blueprint
 from routes.home_routes import home_bp
 from routes.auth_routes import auth_bp
 from utils.auth_utils import require_login
+from routes.ads_routes import ads_bp  
 
 def initialize_routes(app):
     # Middleware para proteger rutas
@@ -17,6 +18,9 @@ def initialize_routes(app):
 
     # Registrar la ruta de inicio
     app.register_blueprint(home_bp)
+
+    # Luego, dentro de initialize_routes o directamente en app.py:
+    app.register_blueprint(ads_bp)
 
     # Categorías dinámicas
     categories = {

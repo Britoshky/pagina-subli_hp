@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="body-avisos form-avisos">
+    <h2 class="h2-avisos">Avisos Radiales</h2>
+    <form method="post" id="scheduleForm">
+        <label for="company_name">Nombre de la Empresa:</label>
+        <input type="text" name="company_name" id="company_name" value="{{ ad.company_name if ad else '' }}" required>
+        
+        <label>Horarios (clic para seleccionar):</label>
+        <div class="time-grid">
+            {% for hour in range(8, 23) %}
+                {% for minute in [0, 30] %}
+                    {% set time = '%02d:%02d'|format(hour, minute) %}
+                    <div class="time-slot" data-time="{{ time }}">
+                        {{ time }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        
+        <input type="hidden" name="schedule" id="schedule">
+        <label for="payment_date">Fecha de Pago:</label>
+        <input type="date" name="payment_date" id="payment_date" value="{{ ad.payment_date if ad else '' }}" required>
+        
+        <label for="total">Total:</label>
+        <input type="number" name="total" id="total" value="{{ ad.total|int if ad else 0 }}" step="1" required>
+        
+        <button type="submit">Guardar Aviso</button>
+    </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const timeSlots = document.querySelectorAll('.time-slot');
+    const scheduleInput = document.getElementById('schedule');  // Cambia el ID aquí
+
+    timeSlots.forEach(slot => {
+        slot.addEventListener('click', function() {
+            const time = this.getAttribute('data-time');
+            this.classList.toggle('selected');
+            let selectedTimes = scheduleInput.value ? scheduleInput.value.split(',') : [];
+            const index = selectedTimes.indexOf(time);
+            if (index > -1) {
+                selectedTimes.splice(index, 1);
+            } else {
+                selectedTimes.push(time);
+            }
+            scheduleInput.value = selectedTimes.join(',');  // Actualiza el valor del input oculto
+        });
+    });
+});
+</script>
+{% endblock %}

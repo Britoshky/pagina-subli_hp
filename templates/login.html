@@ -1,26 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* Contenedor principal: centra todo el contenido */
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Caja de inicio de sesión */
+        .login-box {
+            max-width: 400px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Título */
+        .login-box h1 {
+            font-size: 30px;
+            color: #7048e8;
+            margin-bottom: 25px;
+        }
+
+        /* Etiquetas */
+        .login-box form label {
+            display: block;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        /* Campos de entrada */
+        .login-box form input[type="text"],
+        .login-box form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        /* Botón */
+        .login-box form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #eb4d8e;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Hover y active en botón */
+        .login-box form button:hover {
+            background-color: #c93a75;
+            transform: scale(1.05);
+        }
+
+        .login-box form button:active {
+            transform: scale(0.97);
+        }
+
+        /* Mensaje de error */
+        .login-box p {
+            font-size: 15px;
+            color: #e74c3c;
+            margin-top: 15px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Iniciar Sesión</h1>
-        {% if error %}
-        <p style="color: red;">{{ error }}</p>
-        {% endif %}
-        <form method="POST">
-            <label for="username">Usuario</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Ingresar</button>
-        </form>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h1>Iniciar Sesión</h1>
+            {% if error %}
+            <p>{{ error }}</p>
+            {% endif %}
+            <form method="POST">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
