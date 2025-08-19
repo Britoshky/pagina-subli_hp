@@ -85,7 +85,7 @@
                 <td>
                     <div class="actions">
                         <a href="{{ url_for(category + '.edit_item', item_id=item.id) }}" class="btn edit">✎ Editar</a>
-                        <a href="{{ url_for(category + '.delete_item', item_id=item.id) }}" class="btn delete"
+                        <a href="{{ url_for(category + '.delete_item', item_id=item.id, page=page, search=search_query, filter=filter_option) }}" class="btn delete"
                             onclick="return confirm('¿Estás seguro de que deseas eliminar este {{ category }}?')">🗑
                             Eliminar</a>
                     </div>
