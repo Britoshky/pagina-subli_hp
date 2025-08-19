@@ -197,10 +197,24 @@ def create_category_blueprint(category, json_file, upload_folder):
             save_data(json_file, items)
 
             # Tomar los parámetros desde el formulario si existen, si no, usar los de la URL
+            # Tomar los parámetros desde el formulario si existen, si no, usar los de la URL
             search = request.form.get('search', request.args.get('search', ''))
             filter_option = request.form.get('filter', request.args.get('filter', 'todos'))
-            page = request.form.get('page', request.args.get('page', 1))
-            # Redirigir a la lista de elementos manteniendo el contexto
+
+            # Calcular la página exacta donde está el ítem editado
+            items_per_page = 10
+            filtered_items = items
+            if filter_option == 'vendidos':
+                filtered_items = [item for item in items if item['quantity'] == 0]
+            elif filter_option == 'en-stock':
+                filtered_items = [item for item in items if item['quantity'] > 0]
+            if search:
+                filtered_items = [item for item in filtered_items if search.lower() in item['name'].lower()]
+            filtered_items = sorted(filtered_items, key=lambda x: x['name'])
+            item_index = next((index for index, item in enumerate(filtered_items) if item['id'] == item_to_edit['id']), 0)
+            page = (item_index // items_per_page) + 1
+
+            # Redirigir a la página exacta del ítem editado
             return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
 
         return render_template('edit.html', item=item_to_edit, category=category)
@@ -236,7 +250,10 @@ def create_category_blueprint(category, json_file, upload_folder):
                     os.remove(image_path)
             items.remove(item_to_delete)
             save_data(json_file, items)
-        return redirect(url_for(f'{category}.list_items'))
+        search = request.args.get('search', '')
+        filter_option = request.args.get('filter', 'todos')
+        page = request.args.get('page', 1)
+        return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
 
     return bp
 
