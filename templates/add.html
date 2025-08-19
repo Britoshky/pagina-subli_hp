@@ -4,6 +4,11 @@
 
 <h1>Agregar Nuevo {{ category | capitalize }}</h1>
 <form method="POST" action="{{ url_for(category + '.add_item') }}" enctype="multipart/form-data">
+    <!-- Campos ocultos para mantener búsqueda, filtro y página -->
+    <input type="hidden" name="search" value="{{ request.args.get('search', '') }}">
+    <input type="hidden" name="filter" value="{{ request.args.get('filter', 'todos') }}">
+    <input type="hidden" name="page" value="{{ request.args.get('page', 1) }}">
+
     <label for="name">Nombre del {{ category | capitalize }}:</label>
     <input type="text" id="name" name="name" placeholder="Ingrese el nombre del {{ category }}" required>
 

@@ -107,6 +107,7 @@ def create_category_blueprint(category, json_file, upload_folder):
     def add_item():
         # Ruta para agregar un nuevo elemento
         items = load_data(json_file)
+
         if request.method == 'POST':
             name = request.form['name']
             quantity = int(request.form.get('quantity', 0))  # Por defecto, la cantidad será 0
@@ -145,8 +146,9 @@ def create_category_blueprint(category, json_file, upload_folder):
             items_per_page = 10
             page = (item_index // items_per_page) + 1
 
-            search = request.args.get('search', '')
-            filter_option = request.args.get('filter', 'todos')
+            # Tomar los parámetros desde el formulario si existen, si no, usar los de la URL
+            search = request.form.get('search', request.args.get('search', ''))
+            filter_option = request.form.get('filter', request.args.get('filter', 'todos'))
             # Redirigir a la página donde se encuentra el nuevo elemento
             return redirect(url_for(f'{category}.list_items', page=page, search=search, filter=filter_option))
 
@@ -194,8 +196,12 @@ def create_category_blueprint(category, json_file, upload_folder):
             # Guardar los cambios en el archivo JSON
             save_data(json_file, items)
 
-            # Redirigir a la lista de elementos
-            return redirect(url_for(f'{category}.list_items'))
+            # Tomar los parámetros desde el formulario si existen, si no, usar los de la URL
+            search = request.form.get('search', request.args.get('search', ''))
+            filter_option = request.form.get('filter', request.args.get('filter', 'todos'))
+            page = request.form.get('page', request.args.get('page', 1))
+            # Redirigir a la lista de elementos manteniendo el contexto
+            return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
 
         return render_template('edit.html', item=item_to_edit, category=category)
 
