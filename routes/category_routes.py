@@ -126,9 +126,10 @@ def create_category_blueprint(category, json_file, upload_folder):
             else:
                 webp_filename = None
 
-            # Agregar nuevo elemento
+            # Calcular el próximo id correlativo
+            next_id = max([item['id'] for item in items], default=0) + 1
             new_item = {
-                'id': len(items) + 1,
+                'id': next_id,
                 'name': name,
                 'quantity': quantity,
                 'image_filename': os.path.basename(webp_filename) if webp_filename else None
