@@ -201,13 +201,19 @@
         "id": 20,
         "name": "BOB ESPONJA 1",
         "quantity": 0,
-        "image_filename": "COJIN BOB ESPONJA.webp"
+        "image_filename": "BOB ESPONJA 1.webp"
     },
     {
         "id": 21,
         "name": "BOB ESPONJA 2",
         "quantity": 0,
         "image_filename": "BOB ESPONJA 2.webp"
+    },
+    {
+        "id": 211,
+        "name": "BOB ESPONJA 3",
+        "quantity": 0,
+        "image_filename": "BOB ESPONJA 3.webp"
     },
     {
         "id": 154,
@@ -228,8 +234,26 @@
         "image_filename": "BUSCANDO A NEMO.webp"
     },
     {
+        "id": 212,
+        "name": "CALICO CRITTERS",
+        "quantity": 0,
+        "image_filename": "CALICO CRITTERS.webp"
+    },
+    {
+        "id": 213,
+        "name": "CAPIBARA 1",
+        "quantity": 0,
+        "image_filename": "CAPIBARA.webp"
+    },
+    {
+        "id": 214,
+        "name": "CAPIBARA 2",
+        "quantity": 0,
+        "image_filename": "CAPIBARA 2.webp"
+    },
+    {
         "id": 201,
-        "name": "CAPIBARA",
+        "name": "CAPIBARA 3",
         "quantity": 0,
         "image_filename": "COJIN CAPIBARA.webp"
     },
@@ -249,7 +273,13 @@
         "id": 25,
         "name": "CARS",
         "quantity": 0,
-        "image_filename": "CARS.webp"
+        "image_filename": "CARS 1.webp"
+    },
+    {
+        "id": 215,
+        "name": "CARS 2 ",
+        "quantity": 0,
+        "image_filename": "CARS 2.webp"
     },
     {
         "id": 26,
@@ -288,8 +318,14 @@
         "image_filename": "COJIN COLO COLO.webp"
     },
     {
-        "id": 198,
+        "id": 216,
         "name": "COLO COLO 2",
+        "quantity": 0,
+        "image_filename": "COLO COLO 2.webp"
+    },
+    {
+        "id": 198,
+        "name": "COLO COLO 3",
         "quantity": 0,
         "image_filename": "COJIN COLO-COLO.webp"
     },
@@ -322,6 +358,12 @@
         "name": "DEADPOOL",
         "quantity": 0,
         "image_filename": "DEADPOOL.webp"
+    },
+    {
+        "id": 217,
+        "name": "DONKEY KONG",
+        "quantity": 0,
+        "image_filename": "DONKEY KONG.webp"
     },
     {
         "id": 32,
@@ -358,6 +400,12 @@
         "name": "EL EXTRA\u00d1O MUNDO DE JACK",
         "quantity": 0,
         "image_filename": "EL EXTRA\u00d1O MUNDO DE JACK.webp"
+    },
+    {
+        "id": 218,
+        "name": "EL GRINCH",
+        "quantity": 0,
+        "image_filename": "EL GRINCH.webp"
     },
     {
         "id": 36,
