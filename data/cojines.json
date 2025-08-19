@@ -408,22 +408,28 @@
         "image_filename": "EL GRINCH.webp"
     },
     {
+        "id": 219,
+        "name": "EL JUEGO DEL CALAMAR",
+        "quantity": 0,
+        "image_filename": "EL JUEGO DEL CALAMAR.webp"
+    },
+    {
+        "id": 220,
+        "name": "EL JUEGO DEL CALAMAR 2",
+        "quantity": 0,
+        "image_filename": "EL JUEGO DEL CALAMAR 2.webp"
+    },
+    {
         "id": 36,
         "name": "ENCANTO",
         "quantity": 0,
-        "image_filename": "ENCANTO 2.webp"
+        "image_filename": "ENCANTO 1.webp"
     },
     {
         "id": 37,
         "name": "ESCANDALOSOS",
         "quantity": 0,
         "image_filename": "ESCANDALOSOS.webp"
-    },
-    {
-        "id": 202,
-        "name": "FAMILY GUY",
-        "quantity": 0,
-        "image_filename": "COJIN FAMILY GUY.webp"
     },
     {
         "id": 38,
@@ -435,7 +441,7 @@
         "id": 39,
         "name": "FORTNITE 1",
         "quantity": 0,
-        "image_filename": "COJIN FORTNITE.webp"
+        "image_filename": "FORTNITE 1.webp"
     },
     {
         "id": 40,
@@ -486,6 +492,12 @@
         "image_filename": "GATO CON BOTAS.webp"
     },
     {
+        "id": 220,
+        "name": "GOK\u00da",
+        "quantity": 0,
+        "image_filename": "GOK\u00da.webp"
+    },
+    {
         "id": 46,
         "name": "GTA 5",
         "quantity": 0,
@@ -522,8 +534,20 @@
         "image_filename": "COJIN 2.webp"
     },
     {
-        "id": 168,
+        "id": 221,
         "name": "HELLO KITTY 3",
+        "quantity": 0,
+        "image_filename": "KITTY 3.webp"
+    },
+    {
+        "id": 222,
+        "name": "HELLO KITTY 4",
+        "quantity": 0,
+        "image_filename": "KITTY 4.webp"
+    },
+    {
+        "id": 168,
+        "name": "HELLO KITTY 5",
         "quantity": 0,
         "image_filename": "KITTY.webp"
     },
@@ -555,7 +579,7 @@
         "id": 54,
         "name": "INTENSAMENTE 1",
         "quantity": 0,
-        "image_filename": "INTENSAMENTE.webp"
+        "image_filename": "INTENSAMENTE 1.webp"
     },
     {
         "id": 56,
