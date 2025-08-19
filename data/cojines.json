@@ -591,7 +591,7 @@
         "id": 55,
         "name": "IRON MAN",
         "quantity": 0,
-        "image_filename": "IRON MAN.webp"
+        "image_filename": "IROMAN.webp"
     },
     {
         "id": 58,
@@ -612,10 +612,10 @@
         "image_filename": "COJIN JORDAN 23.webp"
     },
     {
-        "id": 204,
-        "name": "JUEGO DEL CALAMAR",
+        "id": 222,
+        "name": "JURASSIC PARK",
         "quantity": 0,
-        "image_filename": "COJIN EL JUEGO DEL CALAMAR.webp"
+        "image_filename": "JURASSIC PARK.webp"
     },
     {
         "id": 59,
