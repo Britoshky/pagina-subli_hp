@@ -78,6 +78,12 @@
         "image_filename": "BABY_YODA.webp"
     },
     {
+        "id": 225,
+        "name": "BALLERINA CAPPUCCINA",
+        "quantity": 0,
+        "image_filename": "BALLERINA CAPPUCCINA.webp"
+    },
+    {
         "id": 10,
         "name": "BARBIE",
         "quantity": 1,
@@ -128,7 +134,7 @@
     {
         "id": 198,
         "name": "BLANCA NIEVES",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "BLANCA NIEVES.webp"
     },
     {
@@ -578,7 +584,7 @@
     {
         "id": 210,
         "name": "LA BELLA DURMIENTE",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "LA BELLA DURMIENTE.webp"
     },
     {
@@ -632,7 +638,7 @@
     {
         "id": 75,
         "name": "LA SIRENITA",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "LA_SIRENITA.webp"
     },
     {
@@ -1064,7 +1070,7 @@
     {
         "id": 131,
         "name": "PRINCESAS DISNEY",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "PRINCESAS DISNEY.webp"
     },
     {
@@ -1270,6 +1276,12 @@
         "name": "TOY STORY",
         "quantity": 1,
         "image_filename": "TOY STORY.webp"
+    },
+    {
+        "id": 226,
+        "name": "TRALALERO TRALALA",
+        "quantity": 0,
+        "image_filename": "TRALALERO.webp"
     },
     {
         "id": 157,
