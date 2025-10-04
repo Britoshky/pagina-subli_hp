@@ -1,0 +1,82 @@
+/* Estilos para lazy loading y optimización */
+
+/* Lazy loading de imágenes */
+img.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background: #f0f0f0;
+    min-height: 100px;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Placeholder para imágenes que están cargando */
+img.lazy::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ddd;
+    border-top: 2px solid #eb6abe;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Reducir animaciones en dispositivos de bajo rendimiento */
+    @media (prefers-reduced-motion: reduce) {
+        img.lazy {
+            transition: none;
+        }
+        
+        img.lazy::before {
+            animation: none;
+        }
+    }
+}
+
+/* Mejoras de rendimiento para tablas grandes */
+.item-list {
+    contain: layout style paint;
+}
+
+.item-list table {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Optimización para elementos que cambian frecuentemente */
+.metric-card {
+    will-change: transform;
+    transform: translateZ(0); /* Forzar aceleración por hardware */
+}
+
+/* Prefetch de recursos críticos */
+.navbar-links a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Optimización de texto */
+body {
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+}

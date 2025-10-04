@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="/static/css/avisos.css">
+    <meta name="description" content="Sistema de gestión de inventario - Palita-shan">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="{{ ('/static/css/styles.css' | minified_url | versioned_url) }}" as="style">
+    <link rel="preload" href="{{ ('/static/css/avisos.css' | minified_url | versioned_url) }}" as="style">
+    
+    <!-- CSS optimizado -->
+    <link rel="stylesheet" href="{{ ('/static/css/styles.css' | minified_url | versioned_url) }}">
+    <link rel="stylesheet" href="{{ ('/static/css/avisos.css' | minified_url | versioned_url) }}">
+    <link rel="stylesheet" href="{{ ('/static/css/performance.css' | minified_url | versioned_url) }}">
+    
+    <!-- DNS prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
     <title>{% block title %}Mi Proyecto{% endblock %}</title>
 </head>
 
@@ -33,9 +45,11 @@
     <div class="container">
         {% block content %}{% endblock %}
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/static/js/navbar.js"></script>
-    <script src="/static/js/ads.js"></script>
+    <!-- Scripts optimizados con defer para mejor rendimiento -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="{{ ('/static/js/performance.js' | minified_url | versioned_url) }}" defer></script>
+    <script src="{{ ('/static/js/navbar.js' | minified_url | versioned_url) }}" defer></script>
+    <script src="{{ ('/static/js/ads.js' | minified_url | versioned_url) }}" defer></script>
 
 </body>
 
