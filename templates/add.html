@@ -13,6 +13,11 @@
     <input type="text" id="name" name="name" placeholder="Ingrese el nombre del {{ category }}" required>
 
     <label for="image">Subir Imagen:</label>
+    <div class="image-upload-info">
+        <small style="color: #6a79eb; font-weight: bold;">
+            ✨ Las imágenes se optimizan automáticamente para carga rápida
+        </small>
+    </div>
     <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
 
     <div id="preview-container">

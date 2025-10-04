@@ -394,8 +394,10 @@ h1 {
     }
 
     .item-list td img {
-        width: 60px;
-        /* Reduce el tamaño de las imágenes */
+        width: 100px;
+        /* Aumenta el tamaño de las imágenes para mejor visibilidad en tablets */
+        min-height: 100px;
+        object-fit: cover;
     }
 
     .actions .btn {
@@ -430,8 +432,10 @@ h1 {
     }
 
     .item-list td img {
-        width: 50px;
-        /* Imágenes más pequeñas en pantallas muy pequeñas */
+        width: 80px;
+        /* Imágenes más grandes en móviles para mejor visibilidad */
+        min-height: 80px;
+        object-fit: cover;
     }
 
     .actions .btn {

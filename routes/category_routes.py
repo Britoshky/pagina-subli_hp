@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from utils.data_utils import load_data, save_data
-from utils.image_utils import convert_to_webp
+from utils.image_utils import convert_to_webp, optimize_uploaded_image
 from utils.pagination_utils import generate_pagination
 from urllib.parse import urlparse, parse_qs
 
@@ -113,16 +113,15 @@ def create_category_blueprint(category, json_file, upload_folder):
             quantity = int(request.form.get('quantity', 0))  # Por defecto, la cantidad será 0
             image = request.files['image']
 
-            # Procesar la imagen si se sube una
-            if image:
-                # Crear la carpeta de subida si no existe
-                if not os.path.exists(upload_folder):
-                    os.makedirs(upload_folder)
-
-                # Guardar la imagen
-                filename = os.path.join(upload_folder, image.filename)
-                image.save(filename)
-                webp_filename = convert_to_webp(filename, upload_folder)
+            # Procesar la imagen si se sube una con optimización automática
+            if image and image.filename:
+                print(f"🖼️  Procesando nueva imagen: {image.filename}")
+                # Optimizar imagen automáticamente al subirla
+                webp_filename = optimize_uploaded_image(image, upload_folder)
+                if webp_filename:
+                    print(f"✅ Imagen optimizada y guardada como: {webp_filename}")
+                else:
+                    print("❌ Error en optimización, imagen no guardada")
             else:
                 webp_filename = None
 
@@ -172,27 +171,27 @@ def create_category_blueprint(category, json_file, upload_folder):
             # Actualizar la cantidad
             item_to_edit['quantity'] = int(request.form.get('quantity', 0))
 
-            # Actualizar la imagen si se sube una nueva
+            # Actualizar la imagen si se sube una nueva con optimización automática
             image = request.files.get('image')
-            if image:
+            if image and image.filename:
+                print(f"🖼️  Actualizando imagen: {image.filename}")
+                
                 # Eliminar la imagen anterior si existe
                 if item_to_edit.get('image_filename'):
                     old_image_path = os.path.join(upload_folder, item_to_edit['image_filename'])
                     if os.path.exists(old_image_path):
                         os.remove(old_image_path)
+                        print(f"🗑️  Imagen anterior eliminada: {item_to_edit['image_filename']}")
 
-                # Guardar la nueva imagen
-                if not os.path.exists(upload_folder):
-                    os.makedirs(upload_folder)
-
-                new_filename = os.path.join(upload_folder, image.filename)
-                image.save(new_filename)
-
-                # Convertir la imagen a formato webp (opcional)
-                webp_filename = convert_to_webp(new_filename, upload_folder)
+                # Optimizar nueva imagen automáticamente
+                webp_filename = optimize_uploaded_image(image, upload_folder)
 
                 # Actualizar el nombre de archivo en el JSON
-                item_to_edit['image_filename'] = os.path.basename(webp_filename) if webp_filename else os.path.basename(new_filename)
+                if webp_filename:
+                    item_to_edit['image_filename'] = webp_filename
+                    print(f"✅ Imagen actualizada y optimizada: {webp_filename}")
+                else:
+                    print("❌ Error al actualizar imagen")
 
             # Guardar los cambios en el archivo JSON
             save_data(json_file, items)
