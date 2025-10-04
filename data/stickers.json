@@ -1,1 +1,260 @@
-[]
+[
+    {
+        "id": 24,
+        "name": "AMONG US",
+        "quantity": 3,
+        "image_filename": null
+    },
+    {
+        "id": 40,
+        "name": "ANGELICA",
+        "quantity": 3,
+        "image_filename": null
+    },
+    {
+        "id": 20,
+        "name": "BAD BUNNY",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 30,
+        "name": "BARBIE 1",
+        "quantity": 1,
+        "image_filename": null
+    },
+    {
+        "id": 32,
+        "name": "BARBIE 2",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 29,
+        "name": "BOB ESPONJA",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 38,
+        "name": "BRAWL STARS",
+        "quantity": 3,
+        "image_filename": null
+    },
+    {
+        "id": 3,
+        "name": "CAPIBARA 1",
+        "quantity": 9,
+        "image_filename": null
+    },
+    {
+        "id": 4,
+        "name": "CAPIBARA 2",
+        "quantity": 9,
+        "image_filename": null
+    },
+    {
+        "id": 37,
+        "name": "CORALINE",
+        "quantity": 3,
+        "image_filename": null
+    },
+    {
+        "id": 14,
+        "name": "CRISTIANO RONALDO (AM)",
+        "quantity": 7,
+        "image_filename": null
+    },
+    {
+        "id": 22,
+        "name": "DBZ",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 23,
+        "name": "EL JUEGO DEL CALAMAR ",
+        "quantity": 1,
+        "image_filename": null
+    },
+    {
+        "id": 43,
+        "name": "ENCANTO",
+        "quantity": 4,
+        "image_filename": null
+    },
+    {
+        "id": 42,
+        "name": "FERXXO",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 27,
+        "name": "GARFIELD",
+        "quantity": 4,
+        "image_filename": null
+    },
+    {
+        "id": 5,
+        "name": "HELLO KITTY 1",
+        "quantity": 6,
+        "image_filename": null
+    },
+    {
+        "id": 6,
+        "name": "HELLO KITTY 2",
+        "quantity": 8,
+        "image_filename": null
+    },
+    {
+        "id": 7,
+        "name": "HELLO KITTY 3",
+        "quantity": 8,
+        "image_filename": null
+    },
+    {
+        "id": 19,
+        "name": "INTENSAMENTE",
+        "quantity": 3,
+        "image_filename": null
+    },
+    {
+        "id": 13,
+        "name": "KEROPPI",
+        "quantity": 8,
+        "image_filename": null
+    },
+    {
+        "id": 1,
+        "name": "KUROMI",
+        "quantity": 9,
+        "image_filename": null
+    },
+    {
+        "id": 15,
+        "name": "LA BELLA",
+        "quantity": 4,
+        "image_filename": null
+    },
+    {
+        "id": 11,
+        "name": "LABUBU 1",
+        "quantity": 8,
+        "image_filename": null
+    },
+    {
+        "id": 12,
+        "name": "LABUBU 2",
+        "quantity": 9,
+        "image_filename": null
+    },
+    {
+        "id": 34,
+        "name": "LOS PADRINOS MAGICOS",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 41,
+        "name": "MARIO BROS",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 17,
+        "name": "MESSI",
+        "quantity": 4,
+        "image_filename": null
+    },
+    {
+        "id": 26,
+        "name": "MICKEY MOUSE ",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 35,
+        "name": "MINNIE MOUSE",
+        "quantity": 1,
+        "image_filename": null
+    },
+    {
+        "id": 21,
+        "name": "MONSTER INC",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 2,
+        "name": "MY MELODY",
+        "quantity": 10,
+        "image_filename": null
+    },
+    {
+        "id": 25,
+        "name": "NINJAGO",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 31,
+        "name": "PLANTAS VS ZOMBIES",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 39,
+        "name": "PLIM PLIM ROSA ",
+        "quantity": 1,
+        "image_filename": null
+    },
+    {
+        "id": 18,
+        "name": "POMPOMPURIN",
+        "quantity": 10,
+        "image_filename": null
+    },
+    {
+        "id": 28,
+        "name": "PRINCESAS",
+        "quantity": 2,
+        "image_filename": null
+    },
+    {
+        "id": 8,
+        "name": "STITCH 1",
+        "quantity": 8,
+        "image_filename": null
+    },
+    {
+        "id": 9,
+        "name": "STITCH 2",
+        "quantity": 10,
+        "image_filename": null
+    },
+    {
+        "id": 10,
+        "name": "STITCH 3",
+        "quantity": 7,
+        "image_filename": null
+    },
+    {
+        "id": 16,
+        "name": "TOY STORY",
+        "quantity": 3,
+        "image_filename": null
+    },
+    {
+        "id": 36,
+        "name": "TURNING RED",
+        "quantity": 1,
+        "image_filename": null
+    },
+    {
+        "id": 33,
+        "name": "VAMPIRINA",
+        "quantity": 2,
+        "image_filename": null
+    }
+]
