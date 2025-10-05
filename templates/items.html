@@ -81,6 +81,15 @@
                         <a href="{{ url_for(category + '.update_stock', item_id=item.id, action='subtract', page=page, search=search_query, filter=filter_option) }}"
                             class="btn subtract">-</a>
                     </div>
+                    
+                    <!-- Formulario para agregar cantidad específica -->
+                    <form method="POST" action="{{ url_for(category + '.update_stock_quantity', item_id=item.id) }}" class="quick-quantity-form">
+                        <input type="hidden" name="search" value="{{ search_query }}">
+                        <input type="hidden" name="filter" value="{{ filter_option }}">
+                        <input type="hidden" name="page" value="{{ page }}">
+                        <input type="number" name="quantity" class="quick-quantity-input" placeholder="Cant." min="1" value="1" title="Cantidad a agregar">
+                        <button type="submit" class="quick-quantity-btn" title="Agregar cantidad específica">+ Agregar</button>
+                    </form>
                 </td>
                 <td>
                     <div class="actions">

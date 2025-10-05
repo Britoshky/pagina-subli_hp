@@ -38,6 +38,29 @@ def create_category_blueprint(category, json_file, upload_folder):
         # Redirigir con los parámetros intactos
         return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
 
+    @bp.route('/update_stock_quantity/<int:item_id>', methods=['POST'])
+    def update_stock_quantity(item_id):
+        # Nueva ruta para actualizar stock con cantidad específica
+        items = load_data(json_file)
+        quantity_to_add = int(request.form.get('quantity', 0))
+        
+        for item in items:
+            if item['id'] == item_id:
+                # Agregar la cantidad especificada
+                item['quantity'] += quantity_to_add
+                if item['quantity'] < 0:  # Evitar cantidades negativas
+                    item['quantity'] = 0
+                save_data(json_file, items)
+                print(f"📦 Stock actualizado: {item['name']} +{quantity_to_add} (Total: {item['quantity']})")
+                break
+
+        # Mantener parámetros de la URL
+        search = request.form.get('search', '')
+        filter_option = request.form.get('filter', 'todos')
+        page = int(request.form.get('page', 1))
+
+        return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
+
 
     @bp.route('/')
     def list_items():

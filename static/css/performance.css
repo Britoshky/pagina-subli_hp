@@ -1,8 +1,67 @@
 /* Estilos para lazy loading y optimización */
 
 /* Lazy loading optimizado para imágenes */
-img.lazy {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+img.lazy {/* Optimización de elementos que cambian frecuentemente */
+.metric-card {
+    will-change: transform;
+    transform: translateZ(0); /* Forzar aceleración por hardware */
+}
+
+/* Estilos para input de cantidad rápida */
+.quick-quantity-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    background: rgba(235, 106, 190, 0.1);
+    border-radius: 5px;
+    border: 1px solid #eb6abe;
+}
+
+.quick-quantity-input {
+    width: 50px;
+    padding: 3px 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.quick-quantity-btn {
+    background: #6a79eb;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quick-quantity-btn:hover {
+    background: #5a69db;
+    transform: scale(1.05);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .quick-quantity-form {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .quick-quantity-input {
+        width: 40px;
+        font-size: 11px;
+    }
+    
+    .quick-quantity-btn {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
     min-height: 80px;
