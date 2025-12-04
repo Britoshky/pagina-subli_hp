@@ -8,7 +8,7 @@ import os
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
 # Configuración de la sesión
 app.config["SESSION_TYPE"] = "filesystem"
@@ -32,6 +32,10 @@ Compress(app)
 # Middleware para proteger rutas
 @app.before_request
 def check_auth():
+    # Permitir archivos estáticos
+    if request.path.startswith('/static/'):
+        return None
+
     allowed_routes = ["auth.login", "auth.logout"]  # Rutas sin protección
     response = require_login(allowed_routes)
     if response:
