@@ -14,6 +14,9 @@ def is_logged_in():
 
 def require_login(allowed_routes):
     """Middleware para proteger rutas"""
+    # Permitir archivos estáticos sin autenticación
+    if request.path.startswith('/static/'):
+        return None
     if "user" not in session and request.endpoint not in allowed_routes:
         return redirect(url_for("auth.login"))
     return None
