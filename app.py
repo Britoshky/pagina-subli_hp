@@ -32,18 +32,23 @@ Compress(app)
 # Middleware para proteger rutas
 @app.before_request
 def check_auth():
-    # Permitir recursos estáticos SERVIDOS POR FLASK
-    if request.endpoint == 'static':
+
+    # 1. Permitir siempre archivos estáticos
+    if request.path.startswith("/static/"):
         return None
 
-    # Permitir rutas públicas
-    allowed_routes = ["auth.login", "auth.logout"]
+    # 2. Evitar requerir login para rutas públicas
+    public_endpoints = ["auth.login", "auth.logout"]
 
-    if request.endpoint in allowed_routes:
+    if request.endpoint in public_endpoints:
         return None
 
-    # Ejecutar autenticación
-    response = require_login(allowed_routes)
+    # 3. Evitar requerir login en rutas sin endpoint (static, assets, favicon, error handlers)
+    if request.endpoint is None:
+        return None
+
+    # 4. Resto de rutas -> requieren login
+    response = require_login(public_endpoints)
     if response:
         return response
 
