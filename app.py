@@ -32,14 +32,21 @@ Compress(app)
 # Middleware para proteger rutas
 @app.before_request
 def check_auth():
-    # Permitir archivos estáticos
-    if request.path.startswith('/static/'):
+    # Permitir recursos estáticos SERVIDOS POR FLASK
+    if request.endpoint == 'static':
         return None
 
-    allowed_routes = ["auth.login", "auth.logout"]  # Rutas sin protección
+    # Permitir rutas públicas
+    allowed_routes = ["auth.login", "auth.logout"]
+
+    if request.endpoint in allowed_routes:
+        return None
+
+    # Ejecutar autenticación
     response = require_login(allowed_routes)
     if response:
         return response
+
 @app.template_filter('format_currency')
 def format_currency(value):
     """Convierte un número a formato de moneda con puntos como separador de miles."""
