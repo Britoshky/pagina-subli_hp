@@ -1,22 +1,22 @@
 from flask import session, redirect, url_for, request
 
-def login_user(username):
-    """Inicia sesión del usuario"""
-    session["user"] = username
-
-def logout_user():
-    """Cierra sesión del usuario"""
-    session.pop("user", None)
-
-def is_logged_in():
-    """Verifica si el usuario está autenticado"""
-    return "user" in session
-
 def require_login(allowed_routes):
-    """Middleware para proteger rutas"""
-    # Permitir archivos estáticos sin autenticación
+    """Middleware para proteger rutas correctamente."""
+
+    # 1. Permitir rutas estáticas, imágenes, assets, etc.
     if request.path.startswith('/static/'):
         return None
-    if "user" not in session and request.endpoint not in allowed_routes:
+
+    # 2. Permitir endpoints sin nombre (static, favicon, manifest, errores)
+    if request.endpoint is None:
+        return None
+
+    # 3. Permitir rutas públicas
+    if request.endpoint in allowed_routes:
+        return None
+
+    # 4. Si el usuario no está logueado → enviar a login
+    if "user" not in session:
         return redirect(url_for("auth.login"))
+
     return None
