@@ -5,13 +5,7 @@ from utils.auth_utils import require_login
 from routes.ads_routes import ads_bp  
 
 def initialize_routes(app):
-    # Middleware para proteger rutas
-    @app.before_request
-    def check_auth():
-        allowed_routes = ["auth.login", "auth.logout", "static"]  # Rutas no protegidas
-        response = require_login(allowed_routes)
-        if response:
-            return response
+    # Middleware eliminado: la protección de rutas se gestiona en app.py
 
     # Registrar rutas de autenticación
     app.register_blueprint(auth_bp)
