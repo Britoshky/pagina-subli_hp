@@ -26,7 +26,7 @@
     {
         "id": 5,
         "name": "AMONG US 2",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "AMONG 2.webp"
     },
     {
@@ -158,7 +158,7 @@
     {
         "id": 253,
         "name": "BLACK PINK",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "BLACK PINK.webp"
     },
     {
@@ -176,13 +176,13 @@
     {
         "id": 29,
         "name": "BLUEY 1",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "Captura de pantalla 2024-11-30 a la(s) 21.55.27.webp"
     },
     {
         "id": 30,
         "name": "BLUEY 2",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "BLUEY 2.webp"
     },
     {
@@ -212,13 +212,13 @@
     {
         "id": 35,
         "name": "BOB ESPONJA 2",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "BOB ESPONJA 2.webp"
     },
     {
         "id": 36,
         "name": "BOB ESPONJA 3",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "BOB ESPONJA 3.webp"
     },
     {
@@ -260,7 +260,7 @@
     {
         "id": 43,
         "name": "CAPIBARA 3",
-        "quantity": 4,
+        "quantity": 2,
         "image_filename": "COJIN CAPIBARA.webp"
     },
     {
@@ -284,7 +284,7 @@
     {
         "id": 47,
         "name": "CARS 2 ",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "CARS 2.webp"
     },
     {
@@ -338,13 +338,13 @@
     {
         "id": 54,
         "name": "COLO COLO 2",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "COLO COLO 2.webp"
     },
     {
         "id": 55,
         "name": "COLO COLO 3",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "COJIN COLO-COLO.webp"
     },
     {
@@ -386,13 +386,13 @@
     {
         "id": 58,
         "name": "CRISTIANO RONALDO 1",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "COJIN CRISTIANO RONALDO.webp"
     },
     {
         "id": 59,
         "name": "CRISTIANO RONALDO 2",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "CR7.webp"
     },
     {
@@ -422,7 +422,7 @@
     {
         "id": 64,
         "name": "DRAGON BALL Z 1",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "COJIN DBZ.webp"
     },
     {
@@ -488,7 +488,7 @@
     {
         "id": 75,
         "name": "FORTNITE 2",
-        "quantity": 2,
+        "quantity": 0,
         "image_filename": "FORTNITE 2.webp"
     },
     {
@@ -566,7 +566,7 @@
     {
         "id": 88,
         "name": "HELLO KITTY 1",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "HELLO KITTY.webp"
     },
     {
@@ -584,7 +584,7 @@
     {
         "id": 91,
         "name": "HELLO KITTY 4",
-        "quantity": 2,
+        "quantity": 0,
         "image_filename": "KITTY 4.webp"
     },
     {
@@ -686,13 +686,13 @@
     {
         "id": 109,
         "name": "KUROMI",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "COJIN KUROMI.webp"
     },
     {
         "id": 110,
         "name": "KUROMI 2",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "KUROMI.webp"
     },
     {
@@ -710,7 +710,7 @@
     {
         "id": 228,
         "name": "LA GRANJA",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "LA GRANJA.webp"
     },
     {
@@ -782,7 +782,7 @@
     {
         "id": 123,
         "name": "LOONEY TUNES",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "LOONEY TUNNES.webp"
     },
     {
@@ -848,13 +848,13 @@
     {
         "id": 134,
         "name": "MARIO BROS 2",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "MARIO BROS 2.webp"
     },
     {
         "id": 232,
         "name": "MASHA Y EL OSO",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "MASHA Y EL OSO.webp"
     },
     {
@@ -980,7 +980,7 @@
     {
         "id": 155,
         "name": "MY MELODY",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "MY MELODY.webp"
     },
     {
@@ -1010,7 +1010,7 @@
     {
         "id": 160,
         "name": "ONE PIECE",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "COJIN ONE PIECE.webp"
     },
     {
@@ -1034,13 +1034,13 @@
     {
         "id": 241,
         "name": "PAILITA 3",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "PAILITA 3.webp"
     },
     {
         "id": 165,
         "name": "PAW PATROL 1",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "COJIN PAW PATROL NI\u00d1O.webp"
     },
     {
@@ -1094,7 +1094,7 @@
     {
         "id": 174,
         "name": "POKEMON 1",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "COJIN POKEMON.webp"
     },
     {
@@ -1160,7 +1160,7 @@
     {
         "id": 185,
         "name": "ROMEO SANTOS",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "ROMEO SANTOS.webp"
     },
     {
@@ -1226,7 +1226,7 @@
     {
         "id": 198,
         "name": "SONIC 2",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "SONIC 3.webp"
     },
     {
@@ -1262,7 +1262,7 @@
     {
         "id": 204,
         "name": "STITCH 1",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "STITCH 1.webp"
     },
     {
@@ -1316,7 +1316,7 @@
     {
         "id": 249,
         "name": "TOM Y JERRY",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "TOM Y JERRY.webp"
     },
     {
@@ -1328,7 +1328,7 @@
     {
         "id": 250,
         "name": "TRALALERO TRALALA",
-        "quantity": 2,
+        "quantity": 0,
         "image_filename": "TRALALERO.webp"
     },
     {
@@ -1358,7 +1358,7 @@
     {
         "id": 252,
         "name": "U DE CHILE",
-        "quantity": 2,
+        "quantity": 0,
         "image_filename": "U DE CHILE.webp"
     },
     {
