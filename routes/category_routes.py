@@ -278,6 +278,25 @@ def create_category_blueprint(category, json_file, upload_folder):
         page = request.args.get('page', 1)
         return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
 
+    @bp.route('/delete_all', methods=['POST'])
+    def delete_all_items():
+        # Eliminar todos los productos y sus imágenes asociadas
+        items = load_data(json_file)
+
+        for item in items:
+            image_filename = item.get('image_filename')
+            if image_filename:
+                image_path = os.path.join(upload_folder, image_filename)
+                if os.path.exists(image_path):
+                    os.remove(image_path)
+
+        save_data(json_file, [])
+
+        search = request.form.get('search', '')
+        filter_option = request.form.get('filter', 'todos')
+        page = request.form.get('page', 1)
+        return redirect(url_for(f'{category}.list_items', search=search, filter=filter_option, page=page))
+
     return bp
 
     

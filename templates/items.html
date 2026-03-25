@@ -18,8 +18,17 @@
     </div>
     <br>
     <!-- Botón de reiniciar -->
-    <div class="reset-container">
-        <button id="open-modal-btn" class="btn reset" data-category="{{ category }}">Reiniciar Stock</button>
+    <div class="toolbar-actions">
+        <div class="reset-container">
+            <button id="open-modal-btn" class="btn reset" data-category="{{ category }}">Reiniciar Stock</button>
+        </div>
+        <form method="POST" action="{{ url_for(category + '.delete_all_items') }}" class="delete-all-form"
+            onsubmit="return confirm('¿Seguro que deseas eliminar TODOS los productos de {{ category }} y sus imágenes? Esta acción no se puede deshacer.')">
+            <input type="hidden" name="search" value="{{ search_query }}">
+            <input type="hidden" name="filter" value="{{ filter_option }}">
+            <input type="hidden" name="page" value="{{ page }}">
+            <button type="submit" class="btn delete-all" title="Eliminar todos los productos de esta categoría">Eliminar todo</button>
+        </form>
     </div>
 
 
@@ -76,10 +85,10 @@
                 <td>
                     <div class="stock-actions">
                         <a href="{{ url_for(category + '.update_stock', item_id=item.id, action='add', page=page, search=search_query, filter=filter_option) }}"
-                            class="btn add">+</a>
+                            class="btn add" aria-label="Sumar una unidad">+</a>
                         <span class="stock-quantity">{{ item.quantity }}</span>
                         <a href="{{ url_for(category + '.update_stock', item_id=item.id, action='subtract', page=page, search=search_query, filter=filter_option) }}"
-                            class="btn subtract">-</a>
+                            class="btn subtract" aria-label="Restar una unidad">-</a>
                     </div>
                     
                     <!-- Formulario para agregar cantidad específica -->
@@ -88,7 +97,10 @@
                         <input type="hidden" name="filter" value="{{ filter_option }}">
                         <input type="hidden" name="page" value="{{ page }}">
                         <input type="number" name="quantity" class="quick-quantity-input" placeholder="Cant." min="1" value="1" title="Cantidad a agregar">
-                        <button type="submit" class="quick-quantity-btn" title="Agregar cantidad específica">+ Agregar</button>
+                        <button type="submit" class="quick-quantity-btn" title="Agregar cantidad específica">
+                            <span class="plus-label">+</span>
+                            <span>Agregar</span>
+                        </button>
                     </form>
                 </td>
                 <td>
@@ -142,6 +154,18 @@
         flex-direction: column;
         align-items: center;
         margin: 20px 0;
+    }
+
+    .toolbar-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .delete-all-form {
+        margin: 0;
     }
 
     /* Campo de búsqueda */
@@ -239,6 +263,18 @@
         background-color: #846aeb;
     }
 
+    .btn.delete-all {
+        background: linear-gradient(135deg, #f05454, #b91c1c);
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(185, 28, 28, 0.28);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn.delete-all:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 22px rgba(185, 28, 28, 0.35);
+    }
+
     .btn.confirm {
         background-color: #d96aeb;
         color: white;
@@ -251,6 +287,112 @@
 
     .btn:hover {
         opacity: 0.9;
+    }
+
+    .item-list .stock-actions {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .item-list .stock-actions .btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .item-list .stock-actions .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .item-list .stock-quantity {
+        min-width: 44px;
+        padding: 6px 8px;
+        border-radius: 10px;
+        background: #f6f3ff;
+        border: 1px solid #e1d9ff;
+        color: #3b2f64;
+    }
+
+    .quick-quantity-form {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #fff6fb, #f3f6ff);
+        border: 1px solid #eadff7;
+        box-shadow: 0 6px 18px rgba(132, 106, 235, 0.12);
+    }
+
+    .quick-quantity-input {
+        width: 62px;
+        height: 34px;
+        border: 1px solid #d6c8ef;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+        color: #33285f;
+        background-color: #ffffff;
+    }
+
+    .quick-quantity-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        height: 34px;
+        padding: 0 12px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #3e68e8, #2448b7);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        cursor: pointer;
+        box-shadow: 0 8px 18px rgba(36, 72, 183, 0.24);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .quick-quantity-btn .plus-label {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    .quick-quantity-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 22px rgba(36, 72, 183, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .quick-quantity-form {
+            margin-top: 4px;
+        }
+
+        .item-list .stock-actions .btn {
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+        }
+
+        .quick-quantity-btn {
+            padding: 0 10px;
+            font-size: 11px;
+        }
     }
 </style>
 
