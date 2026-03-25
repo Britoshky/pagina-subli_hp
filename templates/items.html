@@ -23,7 +23,7 @@
             <button id="open-modal-btn" class="btn reset" data-category="{{ category }}">Reiniciar Stock</button>
         </div>
         <form method="POST" action="{{ url_for(category + '.delete_all_items') }}" class="delete-all-form"
-            onsubmit="return confirm('¿Seguro que deseas eliminar TODOS los productos de {{ category }} y sus imágenes? Esta acción no se puede deshacer.')">
+            onsubmit="return confirmDeleteAll('{{ category|capitalize }}')">
             <input type="hidden" name="search" value="{{ search_query }}">
             <input type="hidden" name="filter" value="{{ filter_option }}">
             <input type="hidden" name="page" value="{{ page }}">
@@ -145,6 +145,25 @@
 <!-- Importar el archivo JavaScript -->
 <script src="/static/js/search.js"></script>
 <script src="/static/js/modalConfirmation.js"></script>
+<script>
+    function confirmDeleteAll(categoryLabel) {
+        const firstConfirmation = confirm(
+            `¿Seguro que deseas eliminar TODOS los productos de ${categoryLabel} y sus imágenes? Esta acción no se puede deshacer.`
+        );
+
+        if (!firstConfirmation) {
+            return false;
+        }
+
+        const validationText = prompt('Escribe ELIMINAR TODO para confirmar definitivamente:');
+        if (validationText !== 'ELIMINAR TODO') {
+            alert('Operación cancelada. Debes escribir exactamente ELIMINAR TODO.');
+            return false;
+        }
+
+        return true;
+    }
+</script>
 
 
 <style>
