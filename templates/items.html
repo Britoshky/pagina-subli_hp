@@ -339,6 +339,52 @@
         color: #3b2f64;
     }
 
+    .item-list .actions {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .item-list .actions .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        height: 34px;
+        padding: 0 12px;
+        border: none;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+        box-shadow: 0 8px 18px rgba(36, 72, 183, 0.24);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .item-list .actions .btn.edit {
+        background: linear-gradient(135deg, #3e68e8, #2448b7);
+    }
+
+    .item-list .actions .btn.delete {
+        background: linear-gradient(135deg, #f05454, #b91c1c);
+        box-shadow: 0 8px 18px rgba(185, 28, 28, 0.28);
+    }
+
+    .item-list .actions .btn:hover {
+        transform: translateY(-1px);
+    }
+
+    .item-list .actions .btn.edit:hover {
+        box-shadow: 0 10px 22px rgba(36, 72, 183, 0.3);
+    }
+
+    .item-list .actions .btn.delete:hover {
+        box-shadow: 0 10px 22px rgba(185, 28, 28, 0.35);
+    }
+
     .quick-quantity-form {
         display: inline-flex;
         align-items: center;
@@ -409,6 +455,12 @@
         }
 
         .quick-quantity-btn {
+            padding: 0 10px;
+            font-size: 11px;
+        }
+
+        .item-list .actions .btn {
+            height: 32px;
             padding: 0 10px;
             font-size: 11px;
         }
