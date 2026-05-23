@@ -7,6 +7,7 @@ def index():
     categories = [
         {"name": "Books", "url": "/books/"},
         {"name": "Stickers", "url": "/stickers/"},
-        {"name": "Cojines", "url": "/cojines/"}
+        {"name": "Cojines", "url": "/cojines/"},
+        {"name": "Tablas de Multiplicar", "url": "/tablas/"}
     ]
     return render_template('index.html', categories=categories)

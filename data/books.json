@@ -15,7 +15,7 @@
         "id": 230,
         "name": "ALICIA EN EL PA\u00cdS DE LAS MARAVILLAS",
         "quantity": 1,
-        "image_filename": "ALICIA.webp"
+        "image_filename": "ALICIA_1777579312.webp"
     },
     {
         "id": 218,
@@ -26,7 +26,7 @@
     {
         "id": 231,
         "name": "AMONG US ",
-        "quantity": 4,
+        "quantity": 3,
         "image_filename": "AMONG US.webp"
     },
     {
@@ -80,19 +80,19 @@
     {
         "id": 225,
         "name": "BALLERINA CAPPUCCINA",
-        "quantity": 10,
+        "quantity": 7,
         "image_filename": "BALLERINA CAPPUCCINA.webp"
     },
     {
         "id": 232,
         "name": "BARBIE",
-        "quantity": 3,
+        "quantity": 1,
         "image_filename": "BARBIE.webp"
     },
     {
         "id": 257,
         "name": "BARBIE 2",
-        "quantity": 4,
+        "quantity": 2,
         "image_filename": "BARBIE 2.webp"
     },
     {
@@ -110,7 +110,7 @@
     {
         "id": 12,
         "name": "BEB\u00c9S LLORONES",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "BEBES_LLORONES.webp"
     },
     {
@@ -158,13 +158,13 @@
     {
         "id": 16,
         "name": "BLUEY 1",
-        "quantity": 8,
+        "quantity": 6,
         "image_filename": "BLUEY.webp"
     },
     {
         "id": 233,
         "name": "BLUEY 2",
-        "quantity": 8,
+        "quantity": 6,
         "image_filename": "BLUEY 2.webp"
     },
     {
@@ -176,20 +176,26 @@
     {
         "id": 18,
         "name": "BOB ESPONJA",
-        "quantity": 5,
+        "quantity": 4,
         "image_filename": "BOB_ESPONJA.webp"
+    },
+    {
+        "id": 267,
+        "name": "BOB ESPONJA 2",
+        "quantity": 0,
+        "image_filename": "BOB ESPONJA 2_1777400462.webp"
     },
     {
         "id": 259,
         "name": "BRAINROT",
-        "quantity": 14,
+        "quantity": 11,
         "image_filename": "BRAINROT_1759945555.webp"
     },
     {
         "id": 19,
         "name": "BRATZ",
         "quantity": 1,
-        "image_filename": "BRATZ.webp"
+        "image_filename": "BRATZ_1777932776.webp"
     },
     {
         "id": 191,
@@ -236,37 +242,37 @@
     {
         "id": 183,
         "name": "CAPIBARA 1",
-        "quantity": 5,
+        "quantity": 4,
         "image_filename": "CAPIBARA 1.webp"
     },
     {
         "id": 195,
         "name": "CAPIBARA 2",
-        "quantity": 5,
+        "quantity": 3,
         "image_filename": "CAPIBARA 2.webp"
     },
     {
         "id": 214,
         "name": "CAPIT\u00c1N AM\u00c9RICA",
         "quantity": 1,
-        "image_filename": "CAPIT\u00c1N AM\u00c9RICA.webp"
+        "image_filename": "CAPIT\u00c1N AM\u00c9RICA+_1778032101.webp"
     },
     {
         "id": 24,
         "name": "CARS",
-        "quantity": 4,
+        "quantity": 2,
         "image_filename": "CARS.webp"
     },
     {
         "id": 193,
         "name": "CENICIENTA ",
         "quantity": 1,
-        "image_filename": "CENICIENTA.webp"
+        "image_filename": "CENICIENTA_1778088126.webp"
     },
     {
         "id": 181,
         "name": "CINNAMORROLL",
-        "quantity": 7,
+        "quantity": 5,
         "image_filename": "CINNAMORROLL.webp"
     },
     {
@@ -303,12 +309,12 @@
         "id": 30,
         "name": "CRASH BANDICOOT ",
         "quantity": 1,
-        "image_filename": "CRASH_BANDICOOT.webp"
+        "image_filename": "CRASH_1778260845.webp"
     },
     {
         "id": 31,
         "name": "CRISTIANO RONALDO",
-        "quantity": 6,
+        "quantity": 3,
         "image_filename": "CRISTIANO_RONALDO.webp"
     },
     {
@@ -332,20 +338,26 @@
     {
         "id": 227,
         "name": "DEMON HUNTERS",
-        "quantity": 19,
+        "quantity": 13,
         "image_filename": "DEMON HUNTERS.webp"
+    },
+    {
+        "id": 266,
+        "name": "DEMON HUNTERS 2",
+        "quantity": 0,
+        "image_filename": "DEMON_1778379919.webp"
     },
     {
         "id": 32,
         "name": "DEMON SLAYER",
         "quantity": 1,
-        "image_filename": "DEMON_SLAYER.webp"
+        "image_filename": "DEMON SLAYER_1778445636.webp"
     },
     {
         "id": 33,
         "name": "DISNEY HALLOWEEN",
         "quantity": 1,
-        "image_filename": "DISNEY_HALLOWEEN.webp"
+        "image_filename": "DISNEY HALLOWEEN_1778451857.webp"
     },
     {
         "id": 34,
@@ -380,7 +392,7 @@
     {
         "id": 38,
         "name": "DRAGON BALL Z",
-        "quantity": 6,
+        "quantity": 3,
         "image_filename": "DRAGON_BALL_Z.webp"
     },
     {
@@ -392,7 +404,7 @@
     {
         "id": 175,
         "name": "EL CADAVER DE LA NOVIA",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "EL CADAVER DE LA NOVIA.webp"
     },
     {
@@ -416,7 +428,7 @@
     {
         "id": 188,
         "name": "EL JUEGO DEL CALAMAR",
-        "quantity": 9,
+        "quantity": 8,
         "image_filename": "EL JUEGO DEL CALAMAR.webp"
     },
     {
@@ -434,14 +446,14 @@
     {
         "id": 42,
         "name": "ENCANTO",
-        "quantity": 4,
+        "quantity": 3,
         "image_filename": "ENCANTO.webp"
     },
     {
         "id": 43,
         "name": "ENREDADOS",
         "quantity": 1,
-        "image_filename": "ENREDADOS.webp"
+        "image_filename": "ENREDADOS_1778897927.webp"
     },
     {
         "id": 44,
@@ -470,13 +482,13 @@
     {
         "id": 48,
         "name": "FROZEN",
-        "quantity": 4,
+        "quantity": 1,
         "image_filename": "FROZEN.webp"
     },
     {
         "id": 49,
         "name": "F\u00daTBOL",
-        "quantity": 4,
+        "quantity": 2,
         "image_filename": "FUTBOL.webp"
     },
     {
@@ -494,7 +506,7 @@
     {
         "id": 205,
         "name": "GOK\u00da",
-        "quantity": 5,
+        "quantity": 3,
         "image_filename": "GOK\u00da.webp"
     },
     {
@@ -524,19 +536,19 @@
     {
         "id": 56,
         "name": "HELLO KITTY 1",
-        "quantity": 8,
+        "quantity": 7,
         "image_filename": "HELLO_KITTY.webp"
     },
     {
         "id": 239,
         "name": "HELLO KITTY 2",
-        "quantity": 7,
+        "quantity": 4,
         "image_filename": "KITTY 2.webp"
     },
     {
         "id": 240,
         "name": "HELLO KITTY 3",
-        "quantity": 8,
+        "quantity": 5,
         "image_filename": "KITTY 3.webp"
     },
     {
@@ -554,7 +566,7 @@
     {
         "id": 59,
         "name": "HOT WHEELS",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "HOT_WHEELS.webp"
     },
     {
@@ -578,7 +590,7 @@
     {
         "id": 61,
         "name": "INTENSAMENTE 2",
-        "quantity": 6,
+        "quantity": 5,
         "image_filename": "INTENSAMENTE_2.webp"
     },
     {
@@ -638,7 +650,7 @@
     {
         "id": 242,
         "name": "KUROMI",
-        "quantity": 10,
+        "quantity": 7,
         "image_filename": "KUROMI 30..webp"
     },
     {
@@ -674,7 +686,7 @@
     {
         "id": 73,
         "name": "LA GRANJA",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "LA_GRANJA.webp"
     },
     {
@@ -698,7 +710,7 @@
     {
         "id": 75,
         "name": "LA SIRENITA",
-        "quantity": 4,
+        "quantity": 2,
         "image_filename": "LA_SIRENITA.webp"
     },
     {
@@ -722,7 +734,7 @@
     {
         "id": 25,
         "name": "LAS CHICAS SUPER PODEROSAS",
-        "quantity": 4,
+        "quantity": 3,
         "image_filename": "LAS_CHICAS_SUPER_PODEROSAS.webp"
     },
     {
@@ -740,13 +752,13 @@
     {
         "id": 78,
         "name": "LILO Y STITCH",
-        "quantity": 8,
+        "quantity": 5,
         "image_filename": "LILO_Y_STITCH.webp"
     },
     {
         "id": 79,
         "name": "LIONEL MESSI",
-        "quantity": 5,
+        "quantity": 2,
         "image_filename": "LIONEL_MESSI.webp"
     },
     {
@@ -842,7 +854,7 @@
     {
         "id": 90,
         "name": "MARIO BROS",
-        "quantity": 7,
+        "quantity": 4,
         "image_filename": "MARIO_BROS.webp"
     },
     {
@@ -854,25 +866,25 @@
     {
         "id": 92,
         "name": "MASHA Y EL OSO",
-        "quantity": 3,
+        "quantity": 1,
         "image_filename": "MASHA_Y_EL_OSO.webp"
     },
     {
         "id": 248,
         "name": "MERLINA",
-        "quantity": 3,
+        "quantity": 2,
         "image_filename": "MERLINA.webp"
     },
     {
         "id": 95,
         "name": "MICKEY MOUSE",
-        "quantity": 3,
+        "quantity": 2,
         "image_filename": "MICKEY MOUSE.webp"
     },
     {
         "id": 96,
         "name": "MINECRAFT",
-        "quantity": 5,
+        "quantity": 3,
         "image_filename": "MINECRAFT.webp"
     },
     {
@@ -884,19 +896,19 @@
     {
         "id": 98,
         "name": "MINNIE MOUSE",
-        "quantity": 4,
+        "quantity": 2,
         "image_filename": "MINNIE MOUSE.webp"
     },
     {
         "id": 99,
         "name": "MOANA",
-        "quantity": 3,
+        "quantity": 2,
         "image_filename": "MOANA.webp"
     },
     {
         "id": 249,
         "name": "MONSTER HIGH",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "monsters high.webp"
     },
     {
@@ -926,13 +938,13 @@
     {
         "id": 104,
         "name": "MY LITTLE PONY",
-        "quantity": 3,
+        "quantity": 2,
         "image_filename": "MY LITTLE PONY.webp"
     },
     {
         "id": 105,
         "name": "MY MELODY",
-        "quantity": 6,
+        "quantity": 5,
         "image_filename": "MY MELODY.webp"
     },
     {
@@ -944,13 +956,13 @@
     {
         "id": 106,
         "name": "NARUTO",
-        "quantity": 5,
+        "quantity": 3,
         "image_filename": "NARUTO.webp"
     },
     {
         "id": 107,
         "name": "NEZUKO",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "NEZUKO.webp"
     },
     {
@@ -986,7 +998,7 @@
     {
         "id": 178,
         "name": "ONE PIECE",
-        "quantity": 3,
+        "quantity": 1,
         "image_filename": "ONE PIECE.webp"
     },
     {
@@ -1016,13 +1028,13 @@
     {
         "id": 114,
         "name": "PAW PATROL",
-        "quantity": 5,
+        "quantity": 4,
         "image_filename": "PAW PATROL.webp"
     },
     {
         "id": 264,
         "name": "PAW PATROL 2",
-        "quantity": 10,
+        "quantity": 16,
         "image_filename": "PAW PATROL 2_1764890475.webp"
     },
     {
@@ -1034,7 +1046,7 @@
     {
         "id": 115,
         "name": "PEPPA PIG",
-        "quantity": 8,
+        "quantity": 6,
         "image_filename": "PEPPA PIG.webp"
     },
     {
@@ -1052,7 +1064,7 @@
     {
         "id": 117,
         "name": "PIKACHU",
-        "quantity": 2,
+        "quantity": 1,
         "image_filename": "PIKACHU.webp"
     },
     {
@@ -1076,7 +1088,7 @@
     {
         "id": 121,
         "name": "PLANTAS VS ZOMBIES",
-        "quantity": 4,
+        "quantity": 3,
         "image_filename": "PLANTAS VS ZOMBIES.webp"
     },
     {
@@ -1106,13 +1118,13 @@
     {
         "id": 265,
         "name": "POKEMON 2",
-        "quantity": 7,
+        "quantity": 5,
         "image_filename": "POKEMON 2_1764898930.webp"
     },
     {
         "id": 124,
         "name": "POK\u00c9MON",
-        "quantity": 8,
+        "quantity": 6,
         "image_filename": "POK\u00c9MON.webp"
     },
     {
@@ -1124,7 +1136,7 @@
     {
         "id": 126,
         "name": "POMPOMPURIN",
-        "quantity": 4,
+        "quantity": 3,
         "image_filename": "POMPOMPURIN.webp"
     },
     {
@@ -1160,7 +1172,7 @@
     {
         "id": 131,
         "name": "PRINCESAS DISNEY",
-        "quantity": 6,
+        "quantity": 3,
         "image_filename": "PRINCESAS DISNEY.webp"
     },
     {
@@ -1202,13 +1214,13 @@
     {
         "id": 254,
         "name": "ROBLOX",
-        "quantity": 6,
+        "quantity": 4,
         "image_filename": "ROBLOX.webp"
     },
     {
         "id": 47,
         "name": "ROSITA FRESITA",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "ROSITA_FRESITA.webp"
     },
     {
@@ -1226,7 +1238,7 @@
     {
         "id": 140,
         "name": "SAMRIO",
-        "quantity": 6,
+        "quantity": 4,
         "image_filename": "SAMRIO.webp"
     },
     {
@@ -1262,7 +1274,7 @@
     {
         "id": 145,
         "name": "SONIC",
-        "quantity": 8,
+        "quantity": 5,
         "image_filename": "SONIC.webp"
     },
     {
@@ -1280,7 +1292,7 @@
     {
         "id": 146,
         "name": "SPIDERMAN",
-        "quantity": 4,
+        "quantity": 1,
         "image_filename": "SPIDERMAN.webp"
     },
     {
@@ -1304,13 +1316,13 @@
     {
         "id": 190,
         "name": "STITCH",
-        "quantity": 12,
+        "quantity": 9,
         "image_filename": "STITCH.webp"
     },
     {
         "id": 149,
         "name": "STRANGER THINGS",
-        "quantity": 1,
+        "quantity": 0,
         "image_filename": "STRANGER THINGS.webp"
     },
     {
@@ -1370,13 +1382,13 @@
     {
         "id": 156,
         "name": "TOY STORY",
-        "quantity": 3,
+        "quantity": 2,
         "image_filename": "TOY STORY.webp"
     },
     {
         "id": 226,
         "name": "TRALALERO TRALALA",
-        "quantity": 7,
+        "quantity": 3,
         "image_filename": "TRALALERO.webp"
     },
     {

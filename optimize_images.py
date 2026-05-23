@@ -125,8 +125,9 @@ def update_json_references(old_path, new_path):
     # Lista de archivos JSON a actualizar
     json_files = [
         'data/books.json',
-        'data/stickers.json', 
-        'data/cojines.json'
+        'data/stickers.json',
+        'data/cojines.json',
+        'data/tablas.json'
     ]
     
     for json_file in json_files:

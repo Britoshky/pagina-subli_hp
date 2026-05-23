@@ -29,6 +29,10 @@ def initialize_routes(app):
         "cojines": {
             "json_file": "data/cojines.json",
             "upload_folder": "static/uploads/cojines"
+        },
+        "tablas": {
+            "json_file": "data/tablas.json",
+            "upload_folder": "static/uploads/tablas"
         }
     }
 
