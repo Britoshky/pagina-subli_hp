@@ -21,6 +21,16 @@ app = Flask(
 def static_files(filename):
     return send_from_directory(app.static_folder, filename)
 
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.static_folder, 'favicon.ico', mimetype='image/x-icon')
+
+
+@app.route('/apple-touch-icon.png')
+def apple_touch_icon():
+    return send_from_directory(app.static_folder, 'apple-touch-icon.png', mimetype='image/png')
+
 # --------------------------------------------------------
 # SESIONES
 # --------------------------------------------------------
